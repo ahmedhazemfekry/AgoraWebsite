@@ -16,5 +16,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(port, function(){
-  console.log('Node js Express js Tutorial');
+  console.log('http://localhost:3000');
 });
