@@ -9,6 +9,7 @@
   "author": "ahmed hazem <a.hazem1995@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3"
   }

@@ -58,6 +58,36 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
+.animation-element{
+  margin: auto;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: auto;
+  }
+
+.left {
+  margin: auto;
+    left-margin: 10%;
+    width: 50%;
+    text-align: left;
+  }
+.right {
+    margin: auto;
+    width: 50%;
+    text-align: right;
+  }
+.mytext{
+  text-align: left;
+  margin-top: 2%;
+  margin-right: 39%
+}
+.mymargin{
+  margin-left: 10%;
+  margin-right: 10%
+}
 
 .btn {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -67,6 +97,29 @@ section h3.section-subheading {
 .btn-xl {
   font-size: 18px;
   padding: 20px 40px;
+}
+
+.btn-me {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0.75em 0.55em;
+  /*letter-spacing: 1px;*/
+  color: white;
+  border-radius: 8px;
+  border-width: 50px;
+}
+
+.btn-me2 {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0.45em 0.15em;
+  /*letter-spacing: 1px;*/
+  color: black;
+  border-color: white;
+  border-radius: 8px;
+  border-width: 50px;
+  border: 1px solid black;
 }
 
 .btn-primary {
@@ -104,6 +157,7 @@ img::-moz-selection {
 
 #mainNav {
   background-color: #212529;
+  background-image: '../img/logos/back.png'
 }
 
 #mainNav .navbar-toggler {
@@ -112,18 +166,21 @@ img::-moz-selection {
   padding: 13px;
   text-transform: uppercase;
   color: white;
+  background-image: '../img/logos/back.png'
   border: 0;
   background-color: #fed136;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: white;
+  background-image: '../img/logos/back.png'
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: black;
+  background-image: '../img/logos/back.png'
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -132,11 +189,13 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
+  background-image: '../img/logos/back.png'
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+background-image: '../img/logos/back.png'
+  color: black;
 }
 
 @media (min-width: 992px) {
@@ -148,12 +207,14 @@ img::-moz-selection {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    background-image: '../img/logos/back.png'
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    background-image: '../img/logos/back.png'
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
@@ -162,17 +223,19 @@ img::-moz-selection {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
+    background-image: '../img/logos/back.png'
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
     padding: 12px 0;
+    background-image: '../img/logos/back.png'
   }
 }
 
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header/Background-header.png");
+  background-image: url("../img/logos/back.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -584,6 +647,7 @@ header.masthead .intro-text .intro-heading {
   width: 225px;
   height: 225px;
   border: 7px solid #fff;
+  align-items: center;
 }
 
 .team-member h4 {
@@ -698,71 +762,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #fed136;
 }
 
-.logo{
-  width: 25%;
-  margin: auto;
-}
-
-#headerBtn{
-  margin-left:10%
-}
-
-.meetHypatians_div1{
-  width: 50%;
-  align:left;
-}
-
-.meetHypatians_div2{
-  width: 50%;
-  align:right;
-}
-
-.title-hypatian{
-  margin-bottom: 5%;
-}
-
-.title_steam_nav{
-  margin-top: 5%;
-}
-
-.hypatian_image{
-width:100%;
-height: 100%;
-align:left;
-}
-
-section#SteamEducation{
-  background-image: url("../img/SteamEducation/background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.steam_image{
-width:100%;
-height: 100%;
-align:right;
-}
-
 .center{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width:50%;
-}
 
-.text-steam{
-  text-align: left;
-  font-family: 'Gaegu', cursive;
-  font-size: 120%;
 }
-
-.text-steam-center{
-  text-align: center;
-  font-family: 'Gaegu', cursive;
-  font-size: 120%;
-}
-
-.hideme
-{
-    opacity:0;
-}
+l

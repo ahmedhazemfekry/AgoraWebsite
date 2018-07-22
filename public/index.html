@@ -19,18 +19,55 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="animate.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
-
   </head>
 
+      <script>
+      $(function(){  // $(document).ready shorthand
+      $('.hideme').fadeIn('slow');
+    });
+
+    $(document).ready(function() {
+
+        /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+
+            /* Check the location of each desired element */
+            $('.hideme').each( function(i){
+
+                var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+
+                    $(this).animate({'opacity':'1'},1500);
+
+                }
+
+            });
+
+        });
+
+    });
+      </script>
   <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <img class="navbar-brand js-scroll-trigger logo" href="#page-top" src="img/header/logo-hypatians.png" alt="">
+      <div class="container animated fadeIn delay-2s">
+        <img class="navbar-brand js-scroll-trigger logo" href="#page-top" src="img/header/hypatia yellow-01.png" alt="">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -40,10 +77,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
-
-            <!--<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>-->
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,8 +99,8 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
-
-          <div class="dropdown" id="headerBtn">
+        <!-- Login & Language -->
+          <!--<div class="dropdown" id="headerBtn">
             <button class="btn btn-outline-light btn-sm text-uppercase js-scroll-trigger" id="headerBtnLogin" >login</button>
             <button class="btn btn-outline-light btn-sm dropdown-toggle text-uppercase js-scroll-trigger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Lang
@@ -76,35 +109,212 @@
               <a class="dropdown-item" href="#">En</a>
               <a class="dropdown-item" href="#">Ar</a>
             </div>
-          </div>
+          </div>-->
         </div>
-
-
-
       </div>
     </nav>
 
     <!-- Header -->
     <header class="masthead">
       <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div class="intro-text animated fadeIn delay-2s">
+          <div class="intro-lead-in animated infinite bounce delay-2s">Welcome To Our Studio!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Watch Video</a>
         </div>
       </div>
     </header>
 
+    <!-- Meet Hypatians -->
+    <section id="MeetHypatians">
+      <div class="container">
+        <div class="row title-hypatian">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase hideme">MEET HYPATIANS</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-8 portfolio-item">
+          <div class="col text-left">
+            <div class="hypatian_image">
+                  <img class="rounded-circle img-fluid hideme"  align="left" src="img/Meet-Hypatian/meetHypatians.png" alt="" left>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-8 portfolio-item">
+          <div class="col text-left">
+            <div class="row-md-4 hideme">
+              <h4 class="service-heading">Ways of Thinking</h4>
+              <div>
+                <p class="text-muted text-steam">Creativity, critical thinking, problem-solving, and decision-making</p>
+              </div>
+              <div class="timeline-image">
+                    <img class="rounded-circle img-fluid hideme"  src="img/Meet-Hypatian/line.png" alt="">
+              </div>
+            </div>
+
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading" color= "gray">Ways of Working</h4>
+            <p class="text-muted text-steam">Communication and collaboration</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid hideme" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading">Tools for Working</h4>
+            <p class="text-muted text-steam">Information and communication technology (ICT) and information literacy</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading">Life Skills</h4>
+            <p class="text-muted text-steam">Citizenship, life and career, personal and social responsibility</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+
+    <section id="SteamEducation">
+      <div class="container">
+        <div class="row title-hypatian hideme">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">STEAM EDUCATION</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <p class="text-muted text-steam hideme">STEAM stands for science, technology, engineering, arts and mathematics, and it promotes rhe ides of the interdisciplinary nature of education. In such a nature, subjects are not taught in vacuum, and are not treated as silots. Subjects become the life of the learner, and the learners can relate everyday experiences with academic content. To do so, we need to introduce project-based learning environments where books are not used, but rather real-life problems that learners need to solve. </p>
+          </div>
+          <div class="col-sm-5">
+            <div class="steam_image">
+                <img  class="steam_image hideme" align="right" src="img/SteamEducation/Illustration.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10">
+            <nav>
+              <div class="nav nav-tabs hideme" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active text-steam" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Skills Oriented Learning</a>
+                <a class="nav-item nav-link text-steam" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Project Based Learning</a>
+                <a class="nav-item nav-link text-steam" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Inquiry Based Learning</a>
+              </div>
+            </nav>
+
+            <div class="tab-content title_steam_nav hideme" id="nav-tabContent" >
+              <div class="tab-pane fade show active text-muted mytext text-steam" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"  >Skills-based learning offers the learners the opportunity to access, process, and express their knowledge using 21st century skills. It fosters their thinking, creativity, relationships with others and with their community. It is based on hand-ons, real-life scenarios where the learner will use and foster skills like problem solving, analytical and communication skills.</div>
+              <div class="tab-pane fade mytext text-muted text-steam" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Skills-based learning offers the learners the opportunity to access, process, and express their knowledge using 21st century skills. It fosters their thinking, creativity, relationships with others and with their community. It is based on hand-ons, real-life scenarios where the learner will use and foster skills like problem solving, analytical and communication skills.</div>
+              <div class="tab-pane fade mytext text-muted text-steam" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Skills-based learning offers the learners the opportunity to access, process, and express their knowledge using 21st century skills. It fosters their thinking, creativity, relationships with others and with their community. It is based on hand-ons, real-life scenarios where the learner will use and foster skills like problem solving, analytical and communication skills.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Previous Projects -->
+  <section  class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row hideme">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Previous Projects</h2>
+          <p class="section-subheading text-muted text-steam-center">We have solid experiences in reforming, transforming, and operationg schools and other learning spaces.</p>
+          <p class="section-subheading text-muted text-steam-center"> Projects we worked on to date:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption hideme">
+            <h4>Green Community Schools (GCS)</h4>
+            <p class="text-muted">Completed</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Suez Petrochemicals Vocational and Industrial School</h4>
+            <!-- <p class="text-muted">Graphic Design</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Mavericks International School</h4>
+            <!-- <p class="text-muted">Identity</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>STEAM Masters</h4>
+            <p class="text-muted">In progress</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Agora</h4>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
     <!-- Services -->
     <section id="services">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
+            <h2 class="section-heading text-uppercase hideme">Services</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center hideme">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -133,108 +343,11 @@
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- About -->
     <section id="about">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">About</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -244,10 +357,10 @@
           <div class="col-lg-12">
             <ul class="timeline">
               <li>
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>2009-2011</h4>
                     <h4 class="subheading">Our Humble Beginnings</h4>
@@ -258,10 +371,10 @@
                 </div>
               </li>
               <li class="timeline-inverted">
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>March 2011</h4>
                     <h4 class="subheading">An Agency is Born</h4>
@@ -272,10 +385,10 @@
                 </div>
               </li>
               <li>
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>December 2012</h4>
                     <h4 class="subheading">Transition to Full Service</h4>
@@ -286,10 +399,10 @@
                 </div>
               </li>
               <li class="timeline-inverted">
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>July 2014</h4>
                     <h4 class="subheading">Phase Two Expansion</h4>
@@ -299,7 +412,7 @@
                   </div>
                 </div>
               </li>
-              <li class="timeline-inverted">
+              <li class="timeline-inverted hideme">
                 <div class="timeline-image">
                   <h4>Be Part
                     <br>Of Our
@@ -315,66 +428,19 @@
     <!-- Team -->
     <section class="bg-light" id="team">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Hypatians</h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4">
+
+        <div class="row center hideme">
+          <div class="col-sm-12">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Marketer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
+              <img class="rounded-circle" src="img/team/rizkalah2.jpg" alt="">
+              <h4>Mohamed Rizkalah</h4>
+              <p class="text-muted text-steam-center">CEO</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -395,9 +461,136 @@
             </div>
           </div>
         </div>
-        <div class="row">
+
+        <div class="row hideme">
+          <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Eid2.jpg" alt="">
+              <h4>Mohamed Eid</h4>
+              <p class="text-muted text-steam-center">CTO</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Dima2.jpg" alt="">
+              <h4>Dima Sorri</h4>
+              <p class="text-muted text-steam-center">Project Manager</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row hideme">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Hoor2.jpg" alt="">
+              <h4>Hoor Alawady</h4>
+              <p class="text-muted text-steam-center">Academic Content Creator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Hossam2.jpg" alt="">
+              <h4>Hossam Serag</h4>
+              <p class="text-muted text-steam-center">Academic Content Creator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Alaa2.jpg" alt="">
+              <h4>Alaa Hassan</h4>
+              <p class="text-muted text-steam-center">Academic Content Creator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row hideme">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted text-steam-center">Be part of Hypatia</p>
           </div>
         </div>
       </div>
@@ -406,7 +599,7 @@
     <!-- Clients -->
     <section class="py-5">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-md-3 col-sm-6">
             <a href="#">
               <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
@@ -434,13 +627,13 @@
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <div class="row">
@@ -479,7 +672,7 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-md-4">
             <span class="copyright">Copyright &copy; Your Website 2018</span>
           </div>
