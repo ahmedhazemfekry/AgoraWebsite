@@ -31,7 +31,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-family: 'Hind Siliguri', sans-serif;
 }
 
 section {
@@ -58,7 +59,17 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
-
+#mytextbold2{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: bold;
+}
+.mytexbold{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-style: medium-bold;
+}
+.mytext{
+  font-family: 'Hind Siliguri', sans-serif;
+}
 .btn {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -189,10 +200,10 @@ header.masthead .intro-text {
 
 header.masthead .intro-text .intro-lead-in {
   font-size: 22px;
-  font-style: italic;
+  /*font-style: italic;*/
   line-height: 22px;
   margin-bottom: 25px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 
 header.masthead .intro-text .intro-heading {
