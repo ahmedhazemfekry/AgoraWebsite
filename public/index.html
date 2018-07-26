@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Hypatia</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,18 +19,56 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Merienda|Noto+Sans|Rasa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="animate.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
-
+    <link href="css/agency.css" rel="stylesheet">
   </head>
 
+      <script>
+      $(function(){  // $(document).ready shorthand
+      $('.hideme').fadeIn('slow');
+    });
+
+    $(document).ready(function() {
+
+        /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+
+            /* Check the location of each desired element */
+            $('.hideme').each( function(i){
+
+                var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+
+                    $(this).animate({'opacity':'1'},1500);
+
+                }
+
+            });
+
+        });
+
+    });
+      </script>
   <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <div class="container animated fadeIn delay-2s">
+        <img class="navbar-brand js-scroll-trigger logo" href="#page-top" src="img/header/hypatia yellow-01.png" alt="">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -38,13 +76,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Agora</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -53,6 +100,17 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
+        <!-- Login & Language -->
+          <!--<div class="dropdown" id="headerBtn">
+            <button class="btn btn-outline-light btn-sm text-uppercase js-scroll-trigger" id="headerBtnLogin" >login</button>
+            <button class="btn btn-outline-light btn-sm dropdown-toggle text-uppercase js-scroll-trigger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lang
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">En</a>
+              <a class="dropdown-item" href="#">Ar</a>
+            </div>
+          </div>-->
         </div>
       </div>
     </nav>
@@ -60,154 +118,237 @@
     <!-- Header -->
     <header class="masthead">
       <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Our Studio!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        <div class="intro-text animated fadeIn delay-2s">
+          <div class="intro-lead-in animated infinite bounce delay-2s" id="mytextbold2">Welcome To Our Studio!</div>
+          <div class="intro-heading text-uppercase textmebold">It's Nice To Meet You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Watch Video</a>
         </div>
       </div>
     </header>
 
+    <!-- Meet Hypatians -->
+    <section id="MeetHypatians">
+      <div class="container">
+        <div class="row title-hypatian">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase hideme mytextbold2">MEET HYPATIANS</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-8 portfolio-item">
+          <div class="col text-left">
+            <div class="hypatian_image">
+                  <img class="rounded-circle img-fluid hideme"  align="left" src="img/Meet-Hypatian/meetHypatians.png" alt="" left>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-8 portfolio-item">
+          <div class="col text-left">
+            <div class="row-md-4 hideme">
+              <h4 class=" mytextbold">Ways of Thinking</h4>
+              <div>
+                <p class="text-muted mytext">Creativity, critical thinking, problem-solving, and decision-making</p>
+              </div>
+              <div class="timeline-image">
+                    <img class="rounded-circle img-fluid hideme"  src="img/Meet-Hypatian/line.png" alt="">
+              </div>
+            </div>
+
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading mytextbold" color= "gray">Ways of Working</h4>
+            <p class="text-muted mytext">Communication and collaboration</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid hideme" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading mytextbold">Tools for Working</h4>
+            <p class="text-muted mytext">Information and communication technology (ICT) and information literacy</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+          <div class="row-md-4 hideme">
+            <h4 class="service-heading mytextbold">Life Skills</h4>
+            <p class="text-muted mytext">Citizenship, life and career, personal and social responsibility</p>
+            <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/Meet-Hypatian/line.png" alt="">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+
+    <section id="SteamEducation">
+      <div class="container">
+        <div class="row title-hypatian hideme">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">STEAM EDUCATION</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <p class="text-muted mytext hideme">STEAM stands for science, technology, engineering, arts and mathematics, and it promotes rhe ides of the interdisciplinary nature of education. In such a nature, subjects are not taught in vacuum, and are not treated as silots. Subjects become the life of the learner, and the learners can relate everyday experiences with academic content. To do so, we need to introduce project-based learning environments where books are not used, but rather real-life problems that learners need to solve. </p>
+          </div>
+          <div class="col-sm-5">
+            <div class="steam_image">
+                <img  class="steam_image hideme" align="right" src="img/SteamEducation/Illustration.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10">
+            <nav>
+              <div class="nav nav-tabs hideme" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active mytext" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Skills Oriented Learning</a>
+                <a class="nav-item nav-link mytext" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Project Based Learning</a>
+                <a class="nav-item nav-link mytext" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Inquiry Based Learning</a>
+              </div>
+            </nav>
+
+            <div class="tab-content title_steam_nav hideme" id="nav-tabContent" >
+              <div class="tab-pane fade show active text-muted mytext mytext" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"  >Skills-based learning offers the learners the opportunity to access, process, and express their knowledge using 21st century skills. It fosters their thinking, creativity, relationships with others and with their community. It is based on hand-ons, real-life scenarios where the learner will use and foster skills like problem solving, analytical and communication skills.</div>
+              <div class="tab-pane fade mytext text-muted mytext" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Instead of giving the learners the facts, they are allowed to interact with the world and come up with their own understanding through collaborative work that promotes self-confidence and a sense of responsibility. The learning process is all based on hands-on activities that allow the learners to observe, explore, and build knowledge. Learning by doing allows for deeper understanding of concepts. Relevance of the projects to the culture and lives of the learners makes it purposeful. The projects promote critical thinking and creativity and the learners are assessed on their ability to use their understanding and skills to solve real problems. Projects also allow meaningful learning and connecting new learning to learners’ past experiences and prior knowledge. And since learners show independence in their own learning, they develop many forms of communication and presentation skills along the way. </div>
+              <div class="tab-pane fade mytext text-muted mytext" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">This type of learning starts by posing a question or a problem, instead of just presenting facts and raw information. Learning is aimed at answering the question at hand. The aim is to develop thinking skills through scientific inquiry, which needs to be developed prior to being exposed to higher levels of inquiry. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Previous Projects -->
+  <section  class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row hideme">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Previous Projects</h2>
+          <p class="section-subheading text-muted mytext">We have solid experiences in reforming, transforming, and operationg schools and other learning spaces.</p>
+          <p class="section-subheading text-muted mytext"> Projects we worked on to date:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption hideme mytextbold2">
+            <h4>Green Community Schools (GCS)</h4>
+            <!-- <p class="text-muted">Completed</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption mytextbold2">
+            <h4>Suez Petrochemicals Vocational and Industrial School</h4>
+            <!-- <p class="text-muted">Graphic Design</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Mavericks International School</h4>
+            <!-- <p class="text-muted">Identity</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>STEAM Masters</h4>
+            <!-- <p class="text-muted">In progress</p> -->
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item hideme">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Agora</h4>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
     <!-- Services -->
     <section id="services">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase hideme" style="margin-bottom: 12%">Services</h2>
+            <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
           </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center hideme">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-leanpub fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="service-heading">Curriculum development</p>
+            <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="service-heading">Professional development</p>
+            <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-envira fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="service-heading">Setting up learning environments</p>
+            <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- About -->
-    <section id="about">
+  <!--   <section id="about">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">About</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -217,10 +358,10 @@
           <div class="col-lg-12">
             <ul class="timeline">
               <li>
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>2009-2011</h4>
                     <h4 class="subheading">Our Humble Beginnings</h4>
@@ -231,10 +372,10 @@
                 </div>
               </li>
               <li class="timeline-inverted">
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>March 2011</h4>
                     <h4 class="subheading">An Agency is Born</h4>
@@ -245,10 +386,10 @@
                 </div>
               </li>
               <li>
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>December 2012</h4>
                     <h4 class="subheading">Transition to Full Service</h4>
@@ -259,10 +400,10 @@
                 </div>
               </li>
               <li class="timeline-inverted">
-                <div class="timeline-image">
+                <div class="timeline-image hideme">
                   <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
                 </div>
-                <div class="timeline-panel">
+                <div class="timeline-panel hideme">
                   <div class="timeline-heading">
                     <h4>July 2014</h4>
                     <h4 class="subheading">Phase Two Expansion</h4>
@@ -272,7 +413,7 @@
                   </div>
                 </div>
               </li>
-              <li class="timeline-inverted">
+              <li class="timeline-inverted hideme">
                 <div class="timeline-image">
                   <h4>Be Part
                     <br>Of Our
@@ -283,24 +424,25 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Team -->
     <section class="bg-light" id="team">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class=" text-muted mytext">Hypatians</h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4">
+
+        <div class="row center hideme">
+          <div class="col-sm-12">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
+              <img class="rounded-circle" src="img/team/rizkalah2.jpg" alt="">
+              <h4>Mohamed Rizkalah</h4>
+              <p class="text-muted mytext">CEO</p>
+            <!--   <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
                     <i class="fa fa-twitter"></i>
@@ -316,70 +458,149 @@
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Marketer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
-        <div class="row">
+
+        <div class="row hideme">
+          <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Eid2.jpg" alt="">
+              <h4>Mohamed Eid</h4>
+              <p class="text-muted mytext">CTO</p>
+            <!--   <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Dima2.jpg" alt="">
+              <h4>Dima Sorri</h4>
+              <p class="text-muted mytext">Project Manager</p>
+            <!--   <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row hideme">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Hoor2.jpg" alt="">
+              <h4>Hoor Alawady</h4>
+              <p class="text-muted mytext">Academic Content Officer</p>
+            <!--   <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Hossam2.jpg" alt="">
+              <h4>Hossam Serag</h4>
+              <p class="text-muted mytext">Academic Content Officer</p>
+            <!--   <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/Alaa2.jpg" alt="">
+              <h4>Alaa Hassan</h4>
+              <p class="text-muted mytext">Educational Content Officer</p>
+             <!--  <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row hideme">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted mytext">Be part of Hypatia</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Clients -->
-    <section class="py-5">
+  <!--   <section class="py-5">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-md-3 col-sm-6">
             <a href="#">
               <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
@@ -402,18 +623,18 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
           </div>
         </div>
-        <div class="row">
+        <div class="row hideme">
           <div class="col-lg-12">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <div class="row">
@@ -452,12 +673,12 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row hideme">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
+            <span class="copyright">Copyright &copy; Hypatia 2018</span>
           </div>
           <div class="col-md-4">
-            <ul class="list-inline social-buttons">
+         <!--    <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
                   <i class="fa fa-twitter"></i>
@@ -473,7 +694,7 @@
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
@@ -505,15 +726,15 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                  <h2 class="text-uppercase">Green Community School (GCS)</h2>
+                  <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                  <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt=""> -->
+                  <p>GCS is a small private, national school in Kerdasa, Giza, Egypt. GCS operated for a year before we took over and did not succeed as projected by owners. Our role there was to rebuild capacity, develop the teachers and the staff professionally, recruit teachers, and handle day-to-day operations. We were able to increase the school capacity by 20%. Moreover, we were able to professionally develop the teachers, and ensure that best practices were utilized in the school. We did so with a very limited budget, but we were successful to build a strong professional community within the school. We worked for eight months before we left as the school was sold to other investors. </p>
+            <!--       <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Threads</li>
                     <li>Category: Illustration</li>
-                  </ul>
+                  </ul> -->
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
@@ -539,15 +760,15 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                  <h2 class="text-uppercase">Suez Petrochemicals Vocational and Industrial School</h2>
+                  <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                  <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
+                  <p>This is a public vocational industrial school in Suez City, Egypt. The school is funded by Misr El Kheir and Exxon Mobil. The school wanted to implement STEM Education to provide its students with the necessary learning environments to foster the students’ innovation and participation in the scientific research spheres. Before we worked there, the school suffered from mismanagement of resources and human capital. Equity and participation were not ensured in the school, and the academic levels we below par. Our responsibilities there included capacity building, professional development, creating learning environments for the students, observe and assess teachers, overlook students’ projects, and develop students’ proficiency in English and Engineering. Currently, the school is ranked among the top public schools in Egypt, and the best vocational school in all of Egypt. </p>
+              <!--     <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Explore</li>
                     <li>Category: Graphic Design</li>
-                  </ul>
+                  </ul> -->
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
@@ -573,15 +794,15 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                  <h2 class="text-uppercase">Mavericks International School</h2>
+                  <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                  <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt=""> -->
+                  <p>Mavericks International School outsourced the development of curricula to Hypatia for Educational Services. Our responsibilities included developing curricula, recruiting teachers, conducting workshops for parents and school administration, writing policies for the blended experience, assisting in developing online learning platforms, assessing applicant students, as well as consulting in building the school’s learning infrastructure. </p>
+            <!--       <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Finish</li>
                     <li>Category: Identity</li>
-                  </ul>
+                  </ul> -->
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
@@ -607,15 +828,15 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                  <h2 class="text-uppercase">STEAM Masters</h2>
+                  <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                  <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt=""> -->
+                  <p>STEAM Masters is an afterschool program for students where they can relate academic content to real life. The program is still in the development and piloting phase, and we have had very positive feedback from participants in various places. </p>
+               <!--    <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Lines</li>
                     <li>Category: Branding</li>
-                  </ul>
+                  </ul> -->
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
@@ -641,15 +862,15 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
+                  <h2 class="text-uppercase">AgoRa</h2>
+                  <p class="item-intro text-muted">In progress</p>
+                  <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt=""> -->
+                  <p>AgoRa is an alternative delivery method that simplifies the curriculum and standards into fun engaging activities, so we aspire to create the first educational mobile application that incorporates everyday objects with learning activities. The application will utilize the latest technology, such as Augmented Reality, Computer Vision, and Artificial Intelligence to apply sciences (i.e., Math, Physics, Chemistry, Biology, History, and Social Sciences) on daily life objects to provide an interactive immersive experience.  It will be designed and developed by a group of educators, software engineers, and other individuals who have different backgrounds and extensive experiences in their respective disciplines. The educational content in the application will be specifically tailored to make the learner experience as interactive and personalized as possible. </p>
+               <!--    <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Southwest</li>
                     <li>Category: Website Design</li>
-                  </ul>
+                  </ul> -->
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
