@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 8080;
 const CoinRouter = require('./routes/CoinRouter');
 
 
@@ -16,5 +16,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(port, function(){
-  console.log('http://localhost:3000');
+  console.log('http://localhost:8080');
 });
