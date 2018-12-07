@@ -1,0 +1,5 @@
+# [Start app.yaml]
+runtime: nodejs
+env: flex
+manual_scaling:
+      instances: 1
